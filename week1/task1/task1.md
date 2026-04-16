@@ -11,3 +11,17 @@ group：多個 user 的集合，用來分類管理權限，例如部門或專案
 role：代表一個身份或服務，不需要登入，可以指定權限，例如指定S3可以訪問哪些資源
 
 policy：JSON格式定義具體規範誰能做什麼事在什麼資源上
+
+<hr>
+
+# 【實作題】
+## 1. 為 root account 創建 MFA 登入。
+<img src="../images/AWS_MFA.png" width="50%">
+
+## 2. 創建 aws credential（access key & secret），並且使用 aws cli 嘗試存取 ec2 列表（可以手動創建一台機器）及 s3 列表。
+<div>
+  <p>S3 Bucket</p>
+  <img src="../images/aws s3 list.png" width="50%">
+  <p>EC2</p>
+  <img src="../images/aws ec2 list.png" width="50%">
+</div>
