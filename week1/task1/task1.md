@@ -16,29 +16,29 @@ policy：JSON格式定義具體規範誰能做什麼事在什麼資源上
 
 # 【實作題】
 ## 1. 為 root account 創建 MFA 登入。
-<img src="../images/AWS_MFA.png" width="80%">
+<img src="../images/AWS_MFA.png" width="50%">
 
 ## 2. 創建 aws credential（access key & secret），並且使用 aws cli 嘗試存取 ec2 列表（可以手動創建一台機器）及 s3 列表。
 <div>
   <p>S3 Bucket</p>
-  <img src="../images/aws s3 list.png" width="80%">
+  <img src="../images/aws s3 list.png" width="60%">
   <p>EC2</p>
-  <img src="../images/aws ec2 list.png" width="80%">
+  <img src="../images/aws ec2 list.png" width="60%">
 </div>
 
 ## 3. 創建一個 user，名為 `s3_readonly`，並且僅給予其 s3 readonly 的權限，為此 user 創建 credential （憑證） 並且設定在 aws cli 內，使用不同的 profile 可以指定用哪個 credential 跟 aws 溝通，驗證方式為嘗試取得 ec2 及 s3 的列表，其中一個會失敗。
 <div>
   <p>列出 S3 Bucket 清單</p>
-  <img src="../images/aws s3readonly access s3.png" width="80%"> 
+  <img src="../images/aws s3readonly access s3.png" width="60%"> 
   <p>列出 ec2 清單 Fail </p>
-  <img src="../images/aws s3readonly access ec2.png" width="80%">
+  <img src="../images/aws s3readonly access ec2.png" width="60%">
 </div>
 
 ## 4. 嘗試創建 inline policy，使 s3_readonly 這個使用者在某個時間後就無法存取 s3，並且回答 inline policy 可以用在哪些地方。
 
 <div>
   <p>建立inline policy</p>
-  <img src="../images/aws s3readonly inline policy.png" width="80%">
+  <img src="../images/aws s3readonly inline policy.png" width="60%">
   
   <p>
   當一個user/一個group/一個service 需要特殊規則或短時間內的用途時，用 Inline Policy
@@ -48,5 +48,5 @@ policy：JSON格式定義具體規範誰能做什麼事在什麼資源上
 
 ## 5. 嘗試創建 EC2，並且為其創建一個 S3ReadOnlyRole 的 role，使 ec2 上可以使用 aws cli（或是 sdk） 存取 s3 資源，並且不需要設定 access key。（這題可以用 aws linux，因為他有內建 aws cli）
 <div>
-  <img src="../images/aws ssh ec2.png" width="80%">
+  <img src="../images/aws ssh ec2.png" width="60%">
 </div>
