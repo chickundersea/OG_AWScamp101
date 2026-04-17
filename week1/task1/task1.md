@@ -48,8 +48,5 @@ policy：JSON格式定義具體規範誰能做什麼事在什麼資源上
 
 ## 5. 嘗試創建 EC2，並且為其創建一個 S3ReadOnlyRole 的 role，使 ec2 上可以使用 aws cli（或是 sdk） 存取 s3 資源，並且不需要設定 access key。（這題可以用 aws linux，因為他有內建 aws cli）
 <div>
-  <p> </p>
-  <img src="" width="80%">
-  <p> </p>
-  <img src="" width="0%"></p>
+  <img src="../images/aws ssh ec2.png" width="80%">
 </div>
